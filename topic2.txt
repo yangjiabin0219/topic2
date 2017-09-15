@@ -1,0 +1,16 @@
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+
+using namespace cv;
+
+
+int main()
+{
+	IplImage *srcImg;
+	srcImg = cvLoadImage("E:\\Visual Studio 2013 Code\\Projects\\cam_face\\3.jpg", CV_LOAD_IMAGE_ANYCOLOR);
+	cvNamedWindow("img");
+	cvShowImage("img", srcImg);
+	cvWaitKey(0);
+	cvReleaseImage(&srcImg);
+	return 0;
+}
